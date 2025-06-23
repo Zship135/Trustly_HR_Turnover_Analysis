@@ -6,7 +6,7 @@ I was tasked by an HR Specialist from the Seattle HQ of Trustly Bank to investig
 
 ## Data Structure
 
-The Excel I was sent has a few errors, making cleanup simple. The main work will be separating tables and writing formulas to calculate turnover concerning education and the department. Here is a rundown of the columns I have to start with.
+The Excel I was sent has a few errors, making cleanup simple. The main task will be separating tables and writing formulas to calculate turnover related to education and the department. Here is a rundown of the columns I have to start with.
 
 We have employee_id, first_name, last_name, gender, birth_date, age, hire_date, tenure_years, job_title, department, location_state, performance_rating, promotion_last_3yrs, attrition, employment_status, termination_date, salary, education_level.
 
@@ -33,4 +33,25 @@ These columns provide a solid starting point. Later on, there will be some calcu
 | termination_date    | The date on which the employee was terminated, left blank if they are still employed         |
 | salary              | How much the employee is paid per year                                                       |
 | education_level     | The highest level of education attained, high school, associate, bachelor, master, doctorate |
+
+## Excel Work
+
+The bulk of the calculations for the dashboard take place in Excel. We start with the initial sheet that was provided and create more for each education level and department. To calculate turnover rates, we use the formula:
+
+`(# terminations) / (avg # Employees)`
+
+Each sheet for every department and education level will have the same layout:
+
+| Column Name    | Description                                                                                     |
+|----------------|-------------------------------------------------------------------------------------------------|
+| year           | The year the data in the same row is associated with                                            |
+| employee_begin | The number of employees at the beginning of the year                                            |
+| terminations   | The number of terminations in the year                                                          |
+| employee_end   | The number of employees at the end of the year                                                  |
+| avg_employees  | The average number of employees in the year, calculated by: `[(employee_begin+employee_end)/2]` |
+| turnover_rate  | The turnover rate for the year                                                                  |
+
+
+
+
 
