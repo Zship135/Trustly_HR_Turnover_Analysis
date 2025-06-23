@@ -51,6 +51,57 @@ Each sheet for every department and education level will have the same layout:
 | avg_employees  | The average number of employees in the year, calculated by: `[(employee_begin+employee_end)/2]` |
 | turnover_rate  | The turnover rate for the year                                                                  |
 
+## Power BI Work
+
+Now that all of these sheets are made, the entire workbook can be imported into Power BI. For each department table, I added a new column that labels the department, and similarly, with education levels. Then, I used Power Query to combine all department tables and education tables into dept_turnover and edu_turnover tables respectively. After this, I am left with three main tables to work with: trustly_hr_dataset, dept_turnover, and edu_turnover.
+
+## Visualization
+
+### Overview
+
+![image](https://github.com/user-attachments/assets/e1f0949b-c9da-4c97-9df3-3ab527e8f666)
+
+The first visual is a total of current employees and terminations per year. The number is the total up to date. The charts show that both hiring and termiantions are trending up, with more hiring than terminating.
+
+---
+
+![image](https://github.com/user-attachments/assets/78d64456-30c9-4e5d-8e1e-ab8a66c4db13)
+
+This donut chart shows the distribution of male and female employees out of the total current employees. The compamy has a slight bit more female than male employees.
+
+---
+
+![image](https://github.com/user-attachments/assets/816a0ac5-5042-42c8-9a5d-dd404e078b61)
+
+This shows the distribution of current employees among different age groups. We hire mostly among the ages of 25-64, with steep drop offs in 17-24 and 65+. This makes sense with retirements and employees being too young/ inexperienced. 
+
+---
+
+![image](https://github.com/user-attachments/assets/a65b34f3-8006-42c7-a8e5-1479c04c9fec)
+
+Here is a graphic that shows branch locations. This shows we have branches in Washington (Seattle, Spokane), Montana (Billings), Oregon (Portland, Eugene), and Idaho (Boise). The company headquarters is in Seattle. The size of each bubble is representative of the amount of employees in the state. 
+
+---
+
+![image](https://github.com/user-attachments/assets/7fd7a248-aa78-4639-ba20-d1723260c089)
+
+Here is the distribution of employees by department. The distribution is as expected, with retail banking at the top, and legal at the bottom.
+
+---
+
+![image](https://github.com/user-attachments/assets/058da2fa-3bac-4bba-8e91-087b87038f7c)
+![image](https://github.com/user-attachments/assets/556af292-f208-44d1-a70a-5337f2d23acf)
+
+These two matrices show a numerical analysis of turnover rates by education and department. Customer support has seen a rise in turnover in the last three years, and make up most of the turnovers in recent years. Human resources has also seen some increase. Employees with only high school education have seen the most turn over, with associate degree holders being a close second. It appears that the gap in turnover between high school and associate is mcuh smaller than associate and bachelor. Employees with a doctorate have the lowest turnover as expected. 
+
+
+
+
+
+
+
+
+
 
 
 
